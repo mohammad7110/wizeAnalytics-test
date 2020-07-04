@@ -1,0 +1,56 @@
+@import "~@angular/material/theming";
+
+
+
+$mat-behyar-primary: (
+    50: #e0f2fb,
+    100: #b3ddf4,
+    200: #80c7ed,
+    300: #4db1e6,
+    400: #26a0e0,
+    500: #008fdb,
+    600: #0087d7,
+    700: #007cd2,
+    800: #0072cd,
+    900: #0060c4,
+    A100: #ecf4ff,
+    A200: #b9d7ff,
+    A400: #86baff,
+    A700: #6dabff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )    
+);
+
+
+
+
+$app-primary : mat-palette($mat-behyar-primary);
+$app-accent : mat-palette($mat-light-blue);
+$app-warn : mat-palette($mat-pink);
+
+$app-theme : mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// $custom-typography: mat-typography-config($font-family: IRANSans,
+//     $headline: mat-typography-level(32px, 48px, 700),
+//     $body-1: mat-typography-level(16px, 24px, 500));
+
+@include mat-core();
+// @include mat-base-typography($custom-typography);
+// @include mat-checkbox-typography($custom-typography);
+// @include angular-material-typography($custom-typography);
+
+@include angular-material-theme($app-theme);

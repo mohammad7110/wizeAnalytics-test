@@ -1,0 +1,62 @@
+<div class="layout">
+
+  <div class="header">
+    <img class="logo" src="assets/images/logo.png" alt="wizelogo">
+    <div class="navbar">
+      <button mat-button [matMenuTriggerFor]="OVERVIEW">OVERVIEW
+        <mat-icon>expand_more
+        </mat-icon>
+      </button>
+      <mat-menu #OVERVIEW="matMenu">
+        <button mat-menu-item>OVERVIEW</button>
+        <button mat-menu-item>OVERVIEW</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="ANALYTICS">ANALYTICS
+        <mat-icon>expand_more
+        </mat-icon>
+      </button>
+      <mat-menu #ANALYTICS="matMenu">
+        <button mat-menu-item>ANALYTICS</button>
+        <button mat-menu-item>ANALYTICS</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="DATA">DATA
+        <mat-icon>expand_more
+        </mat-icon>
+      </button>
+      <mat-menu #DATA="matMenu">
+        <button mat-menu-item>DATA</button>
+        <button mat-menu-item>DATA</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="ALERTS">ALERTS
+        <mat-icon>expand_more
+        </mat-icon>
+      </button>
+      <mat-menu #ALERTS="matMenu">
+        <button mat-menu-item>ALERTS</button>
+        <button mat-menu-item>ALERTS</button>
+      </mat-menu>
+    </div>
+    <button mat-button class="user-profile">
+      <img src="assets/images/logo.png" alt="wizelogo">
+      <mat-icon>arrow_drop_down
+      </mat-icon>
+    </button>
+  </div>
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <div class="filter-box">
+        <label>
+          FILTERS
+        </label>
+        <button mat-raised-button color="primary">RESET</button>
+      </div>
+      <mat-form-field appearance="outline">
+        <input matInput #input type="text" id="email" placeholder="text filter" autocomplete="off">
+      </mat-form-field>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

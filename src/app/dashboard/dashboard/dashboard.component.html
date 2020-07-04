@@ -1,0 +1,87 @@
+<div class="dashboard">
+
+    <div class="tile-title">
+        TILE OVERVIEW <span>| NORTH WEST <mat-icon>arrow_right
+            </mat-icon> 22056</span>
+    </div>
+    <div class="dashaboard-chart">
+
+        <div class="pipe-chart-container">
+
+            <mat-card>
+                <h3>
+                    STATUS HISTORY
+                </h3>
+                <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                    [options]="pieChartOptions" [plugins]="pieChartPlugins" [colors]="pieChartColors"
+                    [legend]="pieChartLegend">
+                </canvas>
+            </mat-card>
+        </div>
+        <div class="pipe-chart-container">
+            <mat-card class="numberical-chart">
+                <div class="box">
+                    <h3>
+                        TOTAL ALERTS:
+                    </h3>
+                    <span class="content">
+                        210
+                        <span>
+                            Alerts
+                        </span>
+                    </span>
+                    <span class="rate">
+                        +206
+                    </span>
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+
+                <div class="box">
+                    <h3>
+                        CONNECTED DEVICES:
+                    </h3>
+                    <span class="content">
+                        320
+                        <span>
+                            Devices
+                        </span>
+                    </span>
+                    <span class="rate">
+                        +145
+                    </span>
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+
+                <div class="box">
+                    <h3>
+                        TRANSMITED DATA:
+                    </h3>
+                    <span class="content">
+                        450
+                        <span>
+                            Gh
+                        </span>
+                    </span>
+                    <span class="rate">
+                        +325
+                    </span>
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="pipe-chart-container bar-chart">
+            <mat-card>
+
+                <h3>
+                    HEALTH STATUS CHART
+                </h3>
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                </canvas>
+                <canvas baseChart width="400" height="50" [datasets]="lineChartData" [labels]="lineChartLabels"
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+                    [chartType]="lineChartType" [plugins]="lineChartPlugins"></canvas>
+            </mat-card>
+        </div>
+    </div>
+</div>

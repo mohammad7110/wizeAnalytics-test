@@ -1,0 +1,51 @@
+.auth-form{
+    background-color: #233D62;
+    min-height: 100%;
+    padding: 1rem 0px 0px;
+    box-sizing: border-box;
+    .logo{
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+        width: 7rem;
+        border: 2px solid #02ABE0;
+    }
+    .form-title{
+        text-align: center;
+        margin: auto;
+        color: #dbeafd;
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+    .mat-card{
+        width: 23rem;
+        margin: auto;
+        padding: 2rem;
+        form{
+            label{
+                display: block;
+                color: rgba(0, 0, 0, 0.4);
+                margin-bottom: 0.1rem;
+                font-weight: 600;
+            }
+            .mat-form-field{
+                width: 100%;
+            }
+        }
+        .mat-raised-button,.mat-stroked-button{
+            width: 100%;
+        }
+        .mat-stroked-button{
+            margin-top: 1rem;
+        }
+    }
+    .form-desc{
+        text-align: center;
+        color: #dbeafd;
+        font-weight: 300;
+        margin-bottom: 0;
+        a{
+            font-weight: 500;
+        }
+    }
+}

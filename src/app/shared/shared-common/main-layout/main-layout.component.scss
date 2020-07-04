@@ -1,0 +1,62 @@
+.layout{
+    min-height: 100%;
+    padding-top: 4rem;
+    .header{
+        background-color: #233D62;
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+        z-index: 100;
+        .logo{
+            height: 3.5rem;
+            border-radius: 50%;
+        }
+        .navbar{
+            display: inline-flex;
+            margin-left: 12.5rem;
+            .mat-button{
+                color: #dbeafd;
+                font-family: inherit;
+            }
+        }
+        .user-profile{
+            margin-left: auto;
+            padding: 0;
+            color: #adadad;
+            img{
+                height: 2rem;
+                border-radius: 50%;
+            }
+        }
+    }
+    .mat-drawer-container{
+      
+        .mat-drawer{
+            background-color: #233D62;
+            width: 16rem;
+            position: fixed;
+            top: 4rem;
+            padding: 1.5rem 1rem;
+            .filter-box{
+                display: flex;
+                color: white;
+                label{
+                    align-items: center;
+                }
+                .mat-raised-button{
+                    margin-left: auto;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .mat-form-field{
+                margin-top: 1rem;
+                width: 100%;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<div class="auth-form">
+  <img class="logo" src="assets/images/logo.png" alt="wizelogo">
+  <h1 class="form-title">
+    Login
+  </h1>
+  <mat-card>
+    <form [formGroup]="form">
+
+      <label>EMAIL</label>
+      <mat-form-field appearance="outline">
+        <input matInput #input type="text" id="email" placeholder="EMAIL" autocomplete="off" formControlName="email">
+        <mat-error *ngIf="form.controls.email.errors?.required">
+
+          email is required
+        </mat-error>
+        <mat-error *ngIf="form.controls.email.errors?.pattern">
+
+          email is invalid
+        </mat-error>
+        <mat-error *ngIf="form.controls.email.errors?.maxlength">
+          maxlength is 128 character
+        </mat-error>
+      </mat-form-field>
+      <label>PASSWORD</label>
+      <mat-form-field appearance="outline">
+        <input matInput #input type="password" id="password" placeholder="PASSWORD" autocomplete="off"
+          formControlName="password">
+        <mat-error *ngIf="form.controls.password.errors?.required">
+
+          password is required
+        </mat-error>
+        <mat-error *ngIf="form.controls.password.errors?.maxlength">
+          password is 128 character
+        </mat-error>
+      </mat-form-field>
+
+    </form>
+    <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="login()">
+      SIGN IN
+    </button>
+    <button mat-stroked-button color="primary" (click)="goRegister()">
+      CREATE ACCOUNT!
+    </button>
+  </mat-card>
+</div>
