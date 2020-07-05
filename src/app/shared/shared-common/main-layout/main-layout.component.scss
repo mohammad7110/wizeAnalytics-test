@@ -10,6 +10,11 @@
         width: 100%;
         left: 0;
         z-index: 100;
+        align-items: center;
+        .mat-icon-button{
+            color: white;
+            margin-right: 0.5rem;
+        }
         .logo{
             height: 3.5rem;
             border-radius: 50%;
@@ -26,6 +31,7 @@
             margin-left: auto;
             padding: 0;
             color: #adadad;
+            margin-right: 0.5rem;
             img{
                 height: 2rem;
                 border-radius: 50%;

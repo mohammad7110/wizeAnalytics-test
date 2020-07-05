@@ -1,7 +1,7 @@
 .auth-form{
     background-color: #233D62;
     min-height: 100%;
-    padding: 1rem 0px 0px;
+    padding: 1rem 1rem 0px;
     box-sizing: border-box;
     .logo{
         display: block;
@@ -21,6 +21,9 @@
         width: 23rem;
         margin: auto;
         padding: 2rem;
+        box-sizing: border-box;
+        max-width: 100%;
+       
         form{
             label{
                 display: block;
