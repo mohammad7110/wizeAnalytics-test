@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators, AbstractControl, ValidationErrors, FormBuilder } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { SessionStorageService } from 'ngx-webstorage';
 
 
 export const PasswordStrengthValidator = (control: AbstractControl): ValidationErrors | null => {
@@ -54,8 +53,7 @@ export class RegisterComponent {
   //   validators: this.password.bind(this)
   // });
 
-  constructor(public formBuilder: FormBuilder, private router: Router,
-    //  private $sessionStorage: SessionStorageService
+  constructor(public formBuilder: FormBuilder, private router: Router
 
   ) {
     this.form = this.formBuilder.group({
@@ -76,8 +74,8 @@ export class RegisterComponent {
     console.log(this.form.value);
     const user = this.form.value;
     delete user.confirmPassword;
-    // this.$sessionStorage.store('user', user);
-    // this.router.navigate(['auth/login']);
+    localStorage.setItem('user', JSON.stringify(user));
+    this.router.navigate(['auth/login']);
   }
 
 
