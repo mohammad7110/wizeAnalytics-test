@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Get started
 ## Clone the repo
 `git clone https://github.com/mohammad7110/wizeAnalytics-test`
+then
 `cd wize-analytics`.
 
 
