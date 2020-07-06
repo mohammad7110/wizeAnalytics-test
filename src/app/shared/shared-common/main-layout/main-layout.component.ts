@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent {
   screenWidth: number;
-  constructor() {
+  constructor(private router: Router) {
     this.screenWidth = window.innerWidth;
     window.onresize = () => {
       // set screenWidth on screen size change
       this.screenWidth = window.innerWidth;
 
     };
+  }
+
+
+  logout() {
+    localStorage.removeItem('isLogin');
+    this.router.navigate(['auth/login']);
   }
 
 

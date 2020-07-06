@@ -4,7 +4,7 @@
     Complete Registration
   </h1>
   <mat-card>
-    <form [formGroup]="form">
+    <form [formGroup]="form" (keyup.enter)="register()">
 
       <label>EMAIL</label>
       <mat-form-field appearance="outline">
@@ -45,10 +45,11 @@
 
           password is required
         </mat-error>
-        <!-- <mat-error *ngIf="form.confirm_password.touched && form.confirmPassword.errors.ConfirmedValidator">
+        <mat-error
+          *ngIf="form.controls.confirmPassword.dirty && form.controls.confirmPassword.errors && form.controls.confirmPassword.errors.mustMatch">
 
           password not match
-        </mat-error> -->
+        </mat-error>
         <mat-error *ngIf="form.controls.confirmPassword.errors?.maxlength">
           password is 128 character
         </mat-error>

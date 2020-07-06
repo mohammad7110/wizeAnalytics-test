@@ -29,7 +29,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -95,7 +96,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           }
@@ -128,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "wize-analytics"
+  "defaultProject": "wize-analytics",
+  "cli": {
+    "analytics": "77f9d628-e615-45c5-92c1-a6309bb8dfa1"
+  }
 }

@@ -4,7 +4,7 @@
     Login
   </h1>
   <mat-card>
-    <form [formGroup]="form">
+    <form [formGroup]="form" (keyup.enter)="login()">
 
       <label>EMAIL</label>
       <mat-form-field appearance="outline">
